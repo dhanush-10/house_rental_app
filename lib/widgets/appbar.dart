@@ -7,7 +7,8 @@ class AppBAR extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Login'),
+        title: const Center(child: Text('Login')),
+        backgroundColor: const Color.fromARGB(255, 221, 176, 41),
       ),
     );
   }
