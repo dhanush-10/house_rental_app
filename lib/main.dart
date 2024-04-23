@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:house_rental_app/widgets/appbar.dart';
+import 'package:house_rental_app/widgets/login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,8 +11,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: AppBAR(),
-      debugShowCheckedModeBanner: false,
-    );
+        debugShowCheckedModeBanner: false, home: LoginWidget());
   }
 }
