@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:house_rental_app/components/squaretile.dart';
 
 class LoginWidget extends StatefulWidget {
   const LoginWidget({super.key});
@@ -23,7 +24,7 @@ class _LoginWidgetState extends State<LoginWidget> {
               ),
               const SizedBox(height: 20),
               const Text(
-                'Welcome you to  Sign-in Page',
+                'Welcome you to  Owner Sign-in Page',
                 style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
@@ -67,6 +68,20 @@ class _LoginWidgetState extends State<LoginWidget> {
                 ),
               ),
               const SizedBox(height: 20),
+              const Padding(
+                padding: EdgeInsets.fromLTRB(0, 5.0, 40.0, 0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                      'Forgot Password',
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.fromLTRB(20.0, 0, 20.0, 0),
                 child: Container(
@@ -76,7 +91,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                   ),
                   child: const Center(
                     child: Padding(
-                      padding: EdgeInsets.all(8.0),
+                      padding: EdgeInsets.all(10.0),
                       child: Text(
                         'Sign in',
                         style: TextStyle(
@@ -89,6 +104,37 @@ class _LoginWidgetState extends State<LoginWidget> {
                 ),
               ),
               const SizedBox(height: 25),
+              const Row(
+                children: [
+                  Expanded(
+                    child: Divider(
+                      thickness: 1.0,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(10.0, 0, 10.0, 0),
+                    child: Text(
+                      'Or Continue with',
+                      style: TextStyle(fontSize: 15),
+                    ),
+                  ),
+                  Expanded(
+                    child: Divider(
+                      thickness: 1.0,
+                    ),
+                  )
+                ],
+              ),
+              const SizedBox(height: 20),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Squaretile(imagepath: 'images/google.png'),
+                  SizedBox(width: 60),
+                  Squaretile(imagepath: 'images/apple.png')
+                ],
+              ),
+              const SizedBox(height: 20),
               const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -108,7 +154,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                     ),
                   )
                 ],
-              )
+              ),
             ],
           ),
         ),
