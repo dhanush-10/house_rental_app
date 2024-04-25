@@ -177,20 +177,6 @@ class _New_UserState extends State<New_User> {
                     ),
                   ),
                   const SizedBox(height: 20),
-                  const Padding(
-                    padding: EdgeInsets.fromLTRB(0, 5.0, 40.0, 0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Text(
-                          'Forgot Password',
-                          style: TextStyle(
-                              fontSize: 15, fontWeight: FontWeight.bold),
-                        ),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(height: 20),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(20.0, 0, 20.0, 0),
                     child: GestureDetector(

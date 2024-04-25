@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:house_rental_app/components/squaretile.dart';
 import 'package:house_rental_app/widgets/Home.dart';
 import 'package:house_rental_app/widgets/New_user.dart';
+import 'package:house_rental_app/widgets/forgotpass.dart';
 import 'package:house_rental_app/widgets/second.dart';
 
 class LoginWidget extends StatefulWidget {
@@ -134,15 +135,23 @@ class _LoginWidgetState extends State<LoginWidget> {
                   ),
                 ),
                 const SizedBox(height: 20),
-                const Padding(
-                  padding: EdgeInsets.fromLTRB(0, 5.0, 40.0, 0),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 5.0, 40.0, 0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Text(
-                        'Forgot Password',
-                        style: TextStyle(
-                            fontSize: 15, fontWeight: FontWeight.bold),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ForgotPass()));
+                        },
+                        child: const Text(
+                          'Forgot Password',
+                          style: TextStyle(
+                              fontSize: 15, fontWeight: FontWeight.bold),
+                        ),
                       ),
                     ],
                   ),
@@ -167,10 +176,13 @@ class _LoginWidgetState extends State<LoginWidget> {
                       },
                       child: GestureDetector(
                         onTap: () {
-                          Navigator.of(context).push(MaterialPageRoute(
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
                               builder: (context) => New(
-                                    email: email,
-                                  )));
+                                email: email,
+                              ),
+                            ),
+                          );
                         },
                         child: const Center(
                           child: Padding(
