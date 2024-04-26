@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:house_rental_app/widgets/login.dart';
+import 'package:house_rental_app/Owner/login.dart';
+import 'package:house_rental_app/User/login.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -50,10 +51,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 ElevatedButton(
                   onPressed: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => const LoginWidget()));
+                      builder: (context) => const LoginOwner(),
+                    ));
                   },
-                  child: Padding(
-                    padding: const EdgeInsets.all(6.0),
+                  child: const Padding(
+                    padding: EdgeInsets.all(6.0),
                     child: Text(
                       'Owner',
                       style: TextStyle(
@@ -74,7 +76,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ElevatedButton(
                   onPressed: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => const LoginWidget()));
+                        builder: (context) => const LoginUser()));
                   },
                   child: Padding(
                     padding: EdgeInsets.all(6.0),
